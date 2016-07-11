@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "cover": "istanbul cover _mocha",
     "test": "mocha"
