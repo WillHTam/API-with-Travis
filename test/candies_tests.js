@@ -119,6 +119,20 @@ describe('PUT /candies/:id', () => {
     })
   })
 
+  it('can return a 422 response', (done) => {
+  api.get('/candies')
+  .set('Accept', 'application/json')
+  .send({
+    'id': 6,
+    'name': 'Smartie',
+    'color': 'Flannel'
+  })
+  .end( (error, response) => {
+    expect(422);
+    done()
+  })
+});
+
 }) // end PUT
 
 // DELETE
